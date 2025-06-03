@@ -1,0 +1,164 @@
+body {
+  background: transparent;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+}
+.gacha-title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow:
+    2px 2px 0 #000,
+   -2px 2px 0 #000,
+    2px -2px 0 #000,
+   -2px -2px 0 #000,
+    0 0 15px rgba(255,255,255,0.2); /* glow doux */
+}
+
+.roulette-wrapper {
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+}
+
+.roulette-container {
+  position: relative;
+  width: 650px;
+  height: 80px;
+  overflow: hidden;
+  border: 3px solid #444;
+  background: #222;
+  border-radius: 10px;
+}
+
+.roulette {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  transition: none;
+}
+
+.roulette span {
+  width: 120px;
+  min-width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  border: 2px solid #666;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.selector {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 2px;
+  background: red;
+  z-index: 10;
+}
+
+.popup {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: rgba(0, 0, 0, 0.92); /* ✅ plus foncé, plus visible */
+  padding: 40px 60px;              /* ✅ plus gros, plus lisible */
+  border-radius: 20px;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: white;
+  z-index: 5;
+  white-space: nowrap;
+  opacity: 0;
+  animation: popUp 0.4s ease forwards;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); /* ✅ halo noir autour */
+}
+
+
+
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Couleurs pastel */
+.rarity-common {
+  background-color: #d4f4d2;
+  color: #111;
+}
+
+.rarity-uncommon {
+  background-color: #d2e4f4;
+  color: #111;
+}
+
+.rarity-rare {
+  background-color: #e3d2f4;
+  color: #111;
+}
+
+.rarity-legendary {
+  background-color: #f4e8b5;
+  color: #111;
+}
+
+/* Glow animé */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px rgba(0,0,0,0); }
+  50% { box-shadow: 0 0 20px 8px var(--glow-color); }
+  100% { box-shadow: 0 0 5px rgba(0,0,0,0); }
+}
+
+.glow {
+  animation: glowPulse 1.5s ease-in-out infinite;
+  border: 2px solid var(--glow-color);
+}
+
+.rarity-rare.glow {
+  --glow-color: #a87fe4;
+}
+
+.rarity-legendary.glow {
+  --glow-color: #f1d86a;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.popup.fadeout {
+  animation: fadeOut 1s ease forwards;
+}
