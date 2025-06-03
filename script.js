@@ -8,20 +8,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const actions = [
     { text: "Boire de l'eau", rarity: "common" },
-      { text: "Rien + ratio", rarity: "common" },
-      { text: "Faire 15 pompes", rarity: "common" },
-      { text: "Musique au choix", rarity: "common" },
-      { text: "Arrête de parler pendant 5 minutes", rarity: "common" },
-      { text: "Danser sur une musique au choix", rarity: "uncommon" },
-      { text: "Arrête de jouer pendant 2 minutes", rarity: "uncommon" },
-      { text: "1 minute de gainage", rarity: "uncommon" },
-      { text: "Imitation de ton choix", rarity: "rare" },
-      { text: "5 minutes sans lunettes", rarity: "rare" },
-      { text: "Offrir un sub", rarity: "rare" },
-      { text: "Mettre VIP", rarity: "rare" },
-      { text: "Ban 1j qui tu veux", rarity: "rare" },
-      { text: "Offrir un skin", rarity: "legendary" },
-      { text: "Chanter une chanson au choix premier degré", rarity: "legendary" }
+    { text: "Rien + ratio", rarity: "common" },
+    { text: "Faire 15 pompes", rarity: "common" },
+    { text: "Musique au choix", rarity: "common" },
+    { text: "Arrête de parler pendant 5 minutes", rarity: "common" },
+    { text: "Danser sur une musique au choix", rarity: "uncommon" },
+    { text: "Arrête de jouer pendant 2 minutes", rarity: "uncommon" },
+    { text: "1 minute de gainage", rarity: "uncommon" },
+    { text: "Imitation de ton choix", rarity: "rare" },
+    { text: "5 minutes sans lunettes", rarity: "rare" },
+    { text: "Offrir un sub", rarity: "rare" },
+    { text: "Mettre VIP", rarity: "rare" },
+    { text: "Ban 1j qui tu veux", rarity: "rare" },
+    { text: "Offrir un skin", rarity: "legendary" },
+    { text: "Chanter une chanson au choix premier degré", rarity: "legendary" }
   ];
 
   const roulette = document.getElementById("roulette");
